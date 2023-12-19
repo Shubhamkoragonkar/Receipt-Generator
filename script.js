@@ -48,18 +48,18 @@ function generatePDF() {
   itemsTable += `<tr style="background-color: rgb(223, 223, 223);"><td colspan="3" style="text-align:right; padding: 8px;"><strong>Total:</strong></td><td colspan = "2" style="text-align:center; padding: 8px; border-top: 1px solid #000;"><strong>₹${totalAmount.toFixed(2)}</strong></td></tr>`;
   itemsTable += '</table>';
   
-  let name = prompt("What is customers name")
-  let phno = prompt("What is customers Phone Number")
-  let add = prompt("What is customers address")
+  // let name = prompt("What is customers name")
+  // let phno = prompt("What is customers Phone Number")
+  // let add = prompt("What is customers address")
   const image = `<img src="android-chrome-512x512.png" alt="logo"/>`;
   const shopHeader = `<h1 style="text-align: center; font-size: 36px; margin-bottom: 10px; color: black; text-shadow: 2px 2px 4px #000;">${shopName}</h1>`;
   const shopDetails = `<p><strong>Address:</strong> B/3 Mahesh Nagar Near Hanuman Mandir Nalasopara East -401303<br><strong>Owner:</strong> SURESH NARAYAN KORGAONKAR<br><strong>Phone Number:</strong> 9892023888</p>`;
   const currentDate = new Date().toLocaleDateString();
   const customerDetails = `
     <div style="display:flex;justify-content:left; margin:10px 10px;flex-wrap:wrap">
-      <p><strong>Bill to:</strong><br> ${name}<br>
-      ${phno}<br>
-      ${add}</p>
+      <p><strong>Bill to:</strong><br> name<br>
+      phno<br>
+      add</p>
     </div>
   `;
   const dateDiv = `<div style="display:flex;justify-content:right; margin:10px 10px;">Date: ${currentDate}</div>`;
