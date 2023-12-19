@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="It is a Website to generate Pdf of a receipt">
+  <title>Receipt Generator</title>
+  <link rel="icon" href="favicon_io/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Receipt Generator</h1>
+    <form id="receiptForm">
+      <label for="itemName">Item Name:</label>
+      <input type="text" id="itemName" required>
+
+      <label for="itemQuantity">Item Quantity:</label>
+      <input type="number" id="itemQuantity" required>
+
+      <label for="itemPrice">Item Price (in ₹):</label>
+      <input type="number" id="itemPrice" required>
+
+      <button type="button" onclick="addItem()">Add Item</button>
+    </form>
+
+    <div id="receipt"></div>
+        <button id="generateBtn" onclick="generatePDF()">Generate PDF</button>
+    </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
