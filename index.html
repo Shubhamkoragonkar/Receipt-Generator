@@ -11,23 +11,41 @@
 <body>
   <div class="container">
     <h1>Receipt Generator</h1>
-    <form id="receiptForm">
-      <label for="itemName">Item Name:</label>
-      <input type="text" id="itemName" required>
+    <!-- Customer details section -->
+    <div id="customerDetails">
+      <label for="customerName">Customer Name:</label>
+      <input type="text" id="customerName" required>
 
-      <label for="itemQuantity">Item Quantity:</label>
-      <input type="number" id="itemQuantity" required>
+      <label for="customerPhone">Customer Phone:</label>
+      <input type="text" id="customerPhone" required>
 
-      <label for="itemPrice">Item Price (in ₹):</label>
-      <input type="number" id="itemPrice" required>
+      <label for="customerAddress">Customer Address:</label>
+      <input type="text" id="customerAddress" required>
 
-      <button type="button" onclick="addItem()">Add Item</button>
-    </form>
+      <button id="addItemBtn" onclick="showItemForm()">Add Item</button>
+    </div>    
+
+
+    <!-- Item details section (hidden initially) -->
+    <div id="itemDetails" style="display: none;">
+      <form id="itemForm">
+        <label for="itemName">Item Name:</label>
+        <input type="text" id="itemName" required>
+
+        <label for="itemQuantity">Item Quantity:</label>
+        <input type="number" id="itemQuantity" required>
+
+        <label for="itemPrice">Item Price Per Piece (in ₹):</label>
+        <input type="number" id="itemPrice" required>
+
+        <button type="button" onclick="addItem()">Add Item</button>
+      </form>
+    </div>
 
     <div id="receipt"></div>
-        <button id="generateBtn" onclick="generatePDF()">Generate PDF</button>
-    </div>
-  
+    <button id="generateBtn" onclick="generatePDF()">Generate PDF</button>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
